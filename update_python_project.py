@@ -12,7 +12,8 @@ class User():
 
     def __init__(self): #firstname, lastname, email, city, state):# you define class and add the required inputs for user.
         self.welcome = raw_input('Welcome to SISTAS Connection.  Would you like to sign up and begin to connect with other like-minded women?')
-        self.firstname = raw_input('What is your first name?')
+        self.firstname = '' #raw_input('What is your first name?')
+        #undo and reset after everything is tested and running.
         self.lastname = raw_input('What is your last name?')
         self.email = raw_input('What is your email address?')
         self.city = raw_input('What city do you live in?')
@@ -22,18 +23,24 @@ class User():
         self.age = raw_input('How old are you')
         self.ethnicity = '' #(  2nd update removed None so and included it into save_user inputs, in order for the test function below to work)
         #3rd update to program, to add user inputs later. you can create a string by using '' and will change the def statement below.
-        # and have =move the question into the add functions.
+        ## and have =move the question into the add functions.
         self.occupation = ''
         self.username = raw_input('Please create a Username')
         self.password = raw_input('Please create a password')
         # I want to create a list that users can choose from.
-        self.hobbies = '' # creates a list of hobbies that user can add.
+        self.hobbies = 'golf' # creates a list of hobbies that user can add.
         self.interest = '' #creates a list of users interest.
+
+        #madlist = {'f': self.fullname, 'a': self.age, 'o': self.occupation, 'c': self.city, 's': self.state, 'h': self.hobbies, 'i': self.interest}
+
+        #bio = 'Hello, my name is %(f)s. I am %(a)s years old.  I live in %(c)s,%(s)s.\n''I enjoy %(h)s. I would like to connect with women who are interested in %(i)s'
+        #print bio % madlist
+
 
 
     def add_hobbies(self, hobby): # define the function. (always use self, and name of what you are wanting to get.)
         hobby = raw_input('What are your hobbies?')
-        self.hobbies =hobby  # create the variable pulling from the class using append-to update information.
+        self.hobbies = hobby  # create the variable pulling from the class using append-to update information.
         return self.hobbies  # returns will return and save what the users answers.
 
     def add_interest(self, interest):
@@ -61,32 +68,48 @@ class User():
         return self.user_state # will return user_state with  age, firstname, hobbies, interest.
 # to test if it work created  g to equal User, print save user g. from inputs. and print user to print dicitoanary.
 
-g = User()
-print g.save_user()
-g.add_ethnicity()
-#had to change the add functions for user inputs and now when we try to add the question is asked after all questions. and added
-#into the dictionary
-#these are sample users to use for search and add functions.
-p = User()
-print p.save_user()
-c = User()
-print c.save_user()
-
-# create a community for all users to go into and search in
-# i think i need to create a search functon.
+# g = User()
+# print g.save_user()
 #
+# #g.add_ethnicity()
+# # #had to change the add functions for user inputs and now when we try to add the question is asked after all questions. and added
+#  #into the dictionary
+#  #these are sample users to use for search and add functions.
+# p = User()
+# print p.save_user()
+#c = User()
+#print c.save_user()
+
+#create a community for all users to go into and search in
+#i think i need to create a search functon.
+
 class Community():
      def __init__(self):
-         self.users = [g, p, c]
+        self.users = [p]
+
+    #def add_community_member(self):
+    #need to create how users are imported into the community.
+        pass
+
+     def search_hobbies(self):
+        self.query = raw_input("what interest would you like to search for? ")
+        for user in self.users:
+            if self.query in (user.hobbies):
+                print(user.firstname)
 
 
+    #def search (interest, hobbies, ethnicity, location, age):
 
+#g = User()
+p = User()
+p.firstname = "persilla"
+p.age = '45'
+p.interest = 'book club, writing club'
+p.hobbies = "golf"
+p.ethnicity = 'african american'
 
-
-
-
-
-
+c = Community()
+c.search_hobbies()
 
 
 
