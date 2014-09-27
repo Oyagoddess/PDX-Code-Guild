@@ -4,7 +4,7 @@ name = 'name'
 address = 'address'
 phone = 'phone'
 entry = [name, address, phone]
-phonebook= {name:entry}
+phonebook = () #{name:entry}
 phonebook = {'joe': ['joe', '123 elm st', '123-456-1234']}
 
 #ask user what they want to do
