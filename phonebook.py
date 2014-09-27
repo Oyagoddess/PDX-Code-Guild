@@ -13,7 +13,7 @@ phonebook= {name:entry}
 #print (phonebook)
 
 #saves user input to create a search
-search= raw_input('who do you want to find?')
+#search= raw_input('who do you want to find?')
 
 #format address entry
 d = {'n': phonebook[search][0], 'a': phonebook[search][1], 'p': phonebook[search][2]}

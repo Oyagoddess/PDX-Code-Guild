@@ -5,32 +5,25 @@ address = 'address'
 phone = 'phone'
 entry = [name, address, phone]
 phonebook= {name:entry}
-#created a pseudo entry
-j = {'joe': ['joe', '123 elm st', '123-456-1234']}
-phonebook.update(j)
+phonebook = {'joe': ['joe', '123 elm st', '123-456-1234']}
 
 #ask user what they want to do
 choice= raw_input ('would you like to add, search or delete an entry?')
-
-#user chooses to add an entry
 if choice == 'add':
-#create input variables for entry
     name = raw_input('What is your first and last name?')
-    address = raw_input('What is your current address?')
-    phone = raw_input('what is your phone number?')
-#    
-    entry = [name, address, phone]
-    phonebook = {name: entry}
-    d = {'n': entry[0], 'a': entry[1], 'p': entry[2]}
+    address= raw_input('What is your current address?')
+    phone= raw_input('what is your phone number?')
+    entry= [name, address, phone]
+    phonebook= {name:entry}
+    phonebook.update(
+    d = {'n': phonebook[name][0], 'a': phonebook[name][1], 'p': phonebook[name][2]}
     template = """
     %(n)s
     %(a)s
     %(p)s
-    Has been added
+    has been added
     """
     print (template % d)
-    phonebook.update(j)
-    print (phonebook)
 
 elif choice =='search':
     find= raw_input('who do you want to find?')
@@ -51,15 +44,15 @@ elif choice == 'delete':
         template = """
         %(n)s
         %(a)s
-        %(p)s"""
-
+        %(p)s
+        """
         print (template % d)
-	answer= raw_input ('are you sure you want to delete? y/n')
+	"""answer= raw_input ('are you sure you want to delete? y/n')
     	if answer == 'y':
 	    phonebook.remove[delete]
 	    print(phonebook)
 	else:
-	    print('You changed your mind!')
+	    print('You changed your mind!')"""
     else:
         print ('It is not found')
 else:
@@ -106,30 +99,30 @@ elif choice == 'delete':
 else:
     print ('please choose an option')
 
-name = raw_input('What is your first and last name?')
-address= raw_input('What is your current address?')
-phone= raw_input('what is your phone number?')
+#name = raw_input('What is your first and last name?'
+#address= raw_input('What is your current address?')
+#phone= raw_input('what is your phone number?')
 
-entry = [name, address, phone]
+#entry= [name, address, phone]
 #test that entry works
-print (entry)
+#print (entry)
 #create dictionary of name and entry
-phonebook= {name:entry}
+#phonebook= {name:entry}
 #test that phonebook works
-print (phonebook)
+#print (phonebook)
 
 #saves user input to create a search
-search= raw_input('who do you want to find?')
+#search= raw_input('who do you want to find?')
 
 #format address entry
-d = {'n': phonebook[search][0], 'a': phonebook[search][1], 'p': phonebook[search][2]}
-template = """
+#d = {'n': phonebook[search][0], 'a': phonebook[search][1], 'p': phonebook[search][2]}
+#template = """
 #%(n)s
 #%(a)s
 #%(p)s
 #"""
 #final phonebook entry output
-print (template % d)
+#print (template % d)
 
 #alternative entry format
-print(phonebook[search][0] + " " + phonebook[search][1] + " " + phonebook[search][2])
+#print(phonebook[search][0] + " " + phonebook[search][1] + " " + phonebook[search][2])

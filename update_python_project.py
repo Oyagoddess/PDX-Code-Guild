@@ -110,7 +110,7 @@ class Community():
                 print user.firstname
 
 
-    # create psuedo user to test search functions. 
+    # create psuedo user to test search functions.
 
 #g = User()
 p = User()

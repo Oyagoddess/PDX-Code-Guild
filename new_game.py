@@ -114,9 +114,9 @@ def play():
 #create more functions for correct, incorrect, and subtract tries.
 #create correct function the game will stop and print you win ( which is the global answer)
         if answer == 'correct':
-            #create print statment of what you want the user to see. ex 26 is the correct answer.
+            #create print statement of what you want the user to see. ex 26 is the correct answer.
             print (str(guess) + ' is ' + str(answer))
-            # call play_again function so the user will be asked if they want to play agian.
+            # call play_again function so the user will be asked if they want to play again.
             play_again()
 
 # create incorrect functions if the user number and deduct each try from 7
@@ -128,7 +128,7 @@ def play():
             print (str(guess) + ' is ' + str(answer) + " you have " + str(tries) + " left")
 # create incorrect and 0 tries function and will print sorry you lose.
         if answer == 'incorrect' and tries == 0:
-            print ('sorry you lose')
+            print ('sorry you lose, the number is' + (str(secret)))
 # call play_agian function again to restart the game.
 
             play_again()
