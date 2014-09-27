@@ -88,5 +88,7 @@ def play():
 # Call play_again function again to restart the game.
             play_again()
 #  Call and activate first_play function game, to continue playing.
-first_play()
+
+if __name__ == '__main__':
+    first_play()
 
