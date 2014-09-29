@@ -1,7 +1,29 @@
-div {
+.toppage {
       background: yellow;
-      }
+      padding: 25px;
+	}
 
-#para1 {
-        background: purple
-      }
+.navbar {
+    display: block;
+    background-color: yellow;
+    width: 900px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border- color: purple;    
+}
+
+
+.img1 {
+	border-style: solid;
+	border-width: medium;
+        border-color: purple;
+        }	
+
+.mission {
+        background: purple;
+	width: 1200px;
+	padding: 25px;
+        margin: 0px;
+	border:0px;
+	 }
