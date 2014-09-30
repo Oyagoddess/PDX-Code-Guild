@@ -1,18 +1,32 @@
 .toppage {
       background: yellow;
-      padding: 25px;
-	}
+      padding: 25px;      
+      }
 
+.sidebars {
+      background: purple;
+      padding: 5px;  
+      }    
+      
+.list {
+      background: yellow;
+      padding: 5px;
+      }
+ 
 .navbar {
-    display: block;
-    background-color: yellow;
-    width: 900px;
-    padding: 10px;
-    border-style: solid;
-    border-width: 2px;
-    border- color: purple;    
-}
-
+      	display: table;
+     	background-color: yellow;
+      	width: 1200px;
+      	border- color: purple;    
+	display:table-cell;
+    	width:1%;
+    	padding:10px;
+    	text-decoration:none;
+    	vertical-align:middle;
+    	text-align:center;	
+	border: 1px solid;
+        border-radius: 20px;    
+      }
 
 .img1 {
 	border-style: solid;
@@ -20,10 +34,15 @@
         border-color: purple;
         }	
 
+.img2 {
+        border-style: solid;
+      	border-width: 1px;
+        border-color: black;
+	}
+
 .mission {
-        background: purple;
-	width: 1200px;
+	background: purple;
+       	width: 1200px;
 	padding: 25px;
         margin: 0px;
-	border:0px;
-	 }
+	}
