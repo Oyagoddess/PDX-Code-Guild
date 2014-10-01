@@ -5,14 +5,23 @@
 
 .sidebars {
       background: purple;
-      padding: 5px;  
+      padding: 5px;
+        
       }    
       
 .list {
       background: yellow;
       padding: 5px;
+      width: 500px;
+      border: 1px solid;
+      border-radius: 20px
       }
  
+.row {
+
+      }
+
+
 .navbar {
       	display: table;
      	background-color: yellow;
