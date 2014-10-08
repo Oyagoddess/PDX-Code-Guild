@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<body>
+<script>
+//restaurant calculator created with ryan//
+var even_split = function() {
+
+    var check_total;
+    check_total = prompt('What is the total bill?');
+    check_total = parseFloat(check_total);
+     alert('This is the bill before the tip: $' + check_total);
+
+    var total_diners;
+    total_diners = prompt('How many diners are there?');
+    total_diners = parseInt(total_diners);
+
+    var small_tip = parseFloat(check_total * .15);
+        if (total_diners < 6) {
+            alert("Your party's total tip is: $" + parseFloat(small_tip).toFixed(2));
+        }
+    var large_party_tip = parseFloat(check_total * .18);
+        if (total_diners > 6) {
+            alert("Your party's tip is: $" + parseFloat(large_party_tip).toFixed(2));
+        }
+
+    var small_party_total = parseFloat(small_tip + check_total).toFixed(2);
+
+
+    var large_party_total = parseFloat(large_party_tip + check_total).toFixed(2);
+
+
+
+    var even_bill = function(pre_tip_bill, diners) {
+        if (diners < 6) {
+            alert ('This is the amount each person owes: $' + parseFloat(small_party_total/diners).toFixed(2));
+        }
+
+        else {
+            alert ('This is the amount each person owes: $' + parseFloat(large_party_total/diners).toFixed(2));
+        }
+    };
+
+    even_bill(check_total, total_diners);
+};
+
+var itemized = function() {
+
+    var menu = {'chicken': 13, 'pizza': 12, 'salad': 7, 'beer': 4, 'wine': 7};
+    var party_size = parseInt(prompt("How many people are in your party?"));
+    var group = [];
+
+    for (var i = 0; i < party_size; i++) {
+        var individuals = prompt("What's your name?");
+        var new_individual = new Person(individuals);
+        group.push(new_individual);
+    }
+
+    var order = function() {
+
+        var ask = function () {
+
+            var follow_up = "y";
+
+            while (follow_up === "y"){
+                var order = prompt(group[i].name + ", what did you order?");
+
+                group[i].getCost(order);
+
+                follow_up = prompt("Did you order anything else?  Answer y for yes or n for no.");
+            }
+        };
+        for (var i = 0; i < group.length; i++) {
+            ask();
+        }
+    };
+    order();
+
+    function Person(name) {
+        this.name = name;
+        this.check = {total: 0, tip: 0, ordered_items: []};
+
+        this.getCost = function (item) {
+
+            this.check.ordered_items.push(item);
+            this.check.total += menu[item];
+        };
+
+        this.tip = function () {
+
+            var individual_tip = prompt("What percentage do you want to tip?");
+            console.log("Your tip amount is " + (individual_tip / 100));
+            return this.check.tip = 1 + (individual_tip / 100);
+
+        };
+
+        this.total = function () {
+            console.log("Your total bill is " + this.check.total + " with tip " + this.check.tip);
+            this.check.total *= this.check.tip;
+            return this.check.total * this.check.tip;
+        }
+    }
+
+    var makeChecks = function () {
+        for (var i = 0; i < group.length; i++) {
+            alert("ok, " + group[i].name + " your current bill is $" + parseFloat(group[i].check.total).toFixed(2));
+            group[i].tip();
+            group[i].total();
+            alert("your total bill with tip is $" + parseFloat(group[i].check.total).toFixed(2));
+        }
+    };
+
+    makeChecks();
+};
+
+var origin = prompt("Do you want to split the bill evenly or itemize your bill?  To split, enter e, to itemize, enter i.")
+    if (origin === "e") {
+        even_split();
+    }
+    else {
+        itemized();
+    }
+</script>
+</body>
+</html>
