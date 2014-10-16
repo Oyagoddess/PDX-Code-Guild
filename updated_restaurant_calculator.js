@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title> </title>
-</head>
-<body>
-<script>
 //restaurant calculator created with ryan//
 /*create a calculator that will allow users to split or evenly divide their bill and
 create individual receipts totals based on menu items ordered.
@@ -142,6 +134,3 @@ var origin = prompt("Do you want to split the bill evenly or itemize your bill? 
     else {
         itemized();
     }
-</script>
-</body>
-</html>
