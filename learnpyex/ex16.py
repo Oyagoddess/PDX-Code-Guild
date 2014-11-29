@@ -38,5 +38,5 @@ target.write(line1 + "\n" + line2 + "\n" + line3 + "\n")
 print "And finally, we close it."
 target.close()  # closes and ends the program
 
-#  to run in terminal you go to directory file is in example ...learnpython$ ex16.py test.txt
+#  to run in terminal you go to directory file is in example ...python ex16.py test.txt
 # then to open the new file nano test.txt

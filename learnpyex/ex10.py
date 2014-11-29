@@ -1,4 +1,4 @@
-tabby_cat = "\t I'm tabbed in."  # creates a tabbed line.
+tabby_cat = "\t I'm tabbed in."  # variable with  a tabbed line.
 persian_cat = "I'm split\non a line."  # \n splits the sentence.
 backslash_cat = "I'm \\ a \\ cat."  # \\ creates a backslash
 

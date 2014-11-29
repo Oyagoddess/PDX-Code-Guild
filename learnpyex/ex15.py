@@ -14,9 +14,9 @@ print "Type the filename again:"  # prompts you to type the text file name
 file_again = raw_input("> ")  # creates the prompt for user to type  ex15.py_ sample.txt filename again
 
 
-txt_again = open(file_again)  # creates a variable to open the filenamecalls txt.again
+txt_again = open(file_again)  # creates a variable to open the filename calls txt.again
 
 # calls to print the filename again
-print txt_again.read() # .reads prints the text file ex15.py_sample.txt
+print txt_again.read()  # .reads prints the text file ex15.py_sample.txt
 
-#  to run in terminal you go to directory file is in example ...learnpython ex15.py ex15.py_sample.txt
+#  to run in terminal you go to directory file is in example ...python ex15.py ex15.py_sample.txt

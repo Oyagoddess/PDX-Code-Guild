@@ -30,5 +30,5 @@ And you have a %r computer.  Nice.
 Are you any good at %r?
 """ % (likes, lives, computer, sport)
 
-#  to run in terminal you go to directory file: example ...learnpython ex14.py with 1 values username (shalonda)
+#  to run in terminal you go to directory file: example ...python ex14.py with 1 values username (shalonda)
 

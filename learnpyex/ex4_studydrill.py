@@ -8,4 +8,6 @@ print i + j
 print x - j * 2
 
 # % has a value you and in statement will replace % with you.
-print "Hey %s there." % "you"
+print "Hey your jersey # is %s." % i
+print "does %s - %s = 13?" % (x, i)
+print "your number", j, "is a float number"

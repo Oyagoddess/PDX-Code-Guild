@@ -17,7 +17,7 @@ def print_none():  #print with no arg
     print "I got nothin'."
 
 # prints with assign args in def statement (function)
-print_two("Zed", "Shaw")
+print_two("Zed", "Shaw")  # replaces original args
 print_two_again("Zed", "Shaw")
 print_one("First")
 print_none()
